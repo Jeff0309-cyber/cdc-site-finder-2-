@@ -1,0 +1,302 @@
+[
+{
+"id": "hkbc",
+"zh": "香港商業中心",
+"area": "Sai Wan",
+"address": "Hong Kong Commercial Centre, 186-191 Connaught Road West, 1/F",
+"addressZH": "西環干諾道西186-191號香港商業中心一樓119號舖",
+"region": "island",
+"lat": 22.28711,
+"lon": 114.13589
+},
+{
+"id": "north",
+"zh": "北街",
+"area": "Kennedy Town",
+"address": "16-30 North Street, G/F",
+"addressZH": "堅尼地城北街16-30號建隆樓地下",
+"region": "island",
+"lat": 22.28244,
+"lon": 114.12901
+},
+{
+"id": "pakdat",
+"zh": "八達大廈",
+"area": "Sai Ying Pun",
+"address": "292-298 Queen's Road West",
+"addressZH": "皇后大道西292-298號八達大廈中層地下",
+"region": "island",
+"lat": 22.28673,
+"lon": 114.14212
+},
+{
+"id": "infinitus",
+"zh": "無限極廣場",
+"area": "Sheung Wan",
+"address": "Infinitus Plaza, 199 Des Voeux Road Central, 1/F",
+"addressZH": "上環德輔道中199號無限極廣場一樓108號舖",
+"region": "island",
+"lat": 22.28639,
+"lon": 114.15371
+},
+{
+"id": "lungkee",
+"zh": "龍記大廈",
+"area": "Sheung Wan",
+"address": "267-275 Des Voeux Road Central, G/F & 1/F",
+"addressZH": "香港德輔道中267-275號龍記大廈地下(入口)及一樓",
+"region": "island",
+"lat": 22.28688,
+"lon": 114.15176
+},
+{
+"id": "melbourne",
+"zh": "萬邦行",
+"area": "Central",
+"address": "Melbourne Plaza, 33 Queen's Road Central, G/F",
+"addressZH": "中環皇后大道中33號萬邦行地下G1-B部份及G2號舖",
+"region": "island",
+"lat": 22.28224,
+"lon": 114.1566
+},
+{
+"id": "wanchai",
+"zh": "新世紀廣場",
+"area": "Wan Chai",
+"address": "161-163 Wan Chai Road, 1/F",
+"addressZH": "灣仔道新世紀廣場161-163號一樓",
+"region": "island",
+"lat": 22.27678,
+"lon": 114.17677
+},
+{
+"id": "percival",
+"zh": "軒尼詩大廈",
+"area": "Causeway Bay",
+"address": "48 Percival Street, 3/F",
+"addressZH": "銅鑼灣波斯富街48號 軒尼詩大廈3樓",
+"region": "island",
+"lat": 22.27974,
+"lon": 114.18303
+},
+{
+"id": "metropole",
+"zh": "新都城大廈",
+"area": "North Point",
+"address": "Metropole Building, 416-438 King's Road, G/F",
+"addressZH": "英皇道416-438號新都城大廈地下",
+"region": "island",
+"lat": 22.29067,
+"lon": 114.19921
+},
+{
+"id": "quarrybay",
+"zh": "糖廠街",
+"area": "Quarry Bay",
+"address": "969-971 King's Road & 1-5 Tong Chong Street, G/F",
+"addressZH": "鰂魚涌英皇道969-971號及糖廠街1-5號地下H及I舖",
+"region": "island",
+"lat": 22.2877,
+"lon": 114.21038
+},
+{
+"id": "cityplaza",
+"zh": "太古城中心",
+"area": "Tai Koo",
+"address": "Cityplaza, 18 Taikoo Shing Road, 1/F",
+"addressZH": "香港港島東太古城道18號太古城中心一樓121及122號舖",
+"region": "island",
+"lat": 22.28585,
+"lon": 114.2177
+},
+{
+"id": "aberdeen",
+"zh": "香港仔中心",
+"area": "Aberdeen",
+"address": "Aberdeen Centre Phase 3, G/F",
+"addressZH": "香港仔中心第三期地下15及16號商舖",
+"region": "island",
+"lat": 22.24787,
+"lon": 114.1543
+},
+{
+"id": "starhouse",
+"zh": "星光行",
+"area": "Tsim Sha Tsui",
+"address": "Star House, 3 Salisbury Road, Basement",
+"addressZH": "尖沙咀梳士巴利道3號星光行地庫B7,B21,B22及B27",
+"region": "kowloon",
+"lat": 22.29464,
+"lon": 114.16921
+},
+{
+"id": "jordan",
+"zh": "百誠大廈",
+"area": "Jordan",
+"address": "31-37 Jordan Road, 1/F",
+"addressZH": "佐敦道31-37號百誠大廈一樓",
+"region": "kowloon",
+"lat": 22.30546,
+"lon": 114.17048
+},
+{
+"id": "argyle",
+"zh": "旺角中心",
+"area": "Mong Kok",
+"address": "688 Nathan Road, Basement",
+"addressZH": "旺角彌敦道688號旺角中心第一期地庫",
+"region": "kowloon",
+"lat": 22.3201,
+"lon": 114.16936
+},
+{
+"id": "csw",
+"zh": "長沙灣道",
+"area": "Sham Shui Po",
+"address": "241 Cheung Sha Wan Road, 1/F",
+"addressZH": "長沙灣道241號桂祥大廈一樓",
+"region": "kowloon",
+"lat": 22.33098,
+"lon": 114.16167
+},
+{
+"id": "taipord",
+"zh": "曉尚",
+"area": "Sham Shui Po",
+"address": "188 Tai Po Road, G/F",
+"addressZH": "九龍大埔道188號曉尚2,3,5-9號地舖",
+"region": "kowloon",
+"lat": 22.33178,
+"lon": 114.16502
+},
+{
+"id": "kcplaza",
+"zh": "九龍城廣場",
+"area": "Kowloon City",
+"address": "Kowloon City Plaza, 128 Carpenter Road",
+"addressZH": "九龍城賈炳達道128號九龍城廣場UG09-10號",
+"region": "kowloon",
+"lat": 22.33083,
+"lon": 114.18762
+},
+{
+"id": "tokwawan",
+"zh": "永德大廈",
+"area": "To Kwa Wan",
+"address": "77 Pak Tai Street, G/F & 1/F",
+"addressZH": "九龍北帝街77號永德大廈一樓全層及地下",
+"region": "kowloon",
+"lat": 22.32196,
+"lon": 114.18862
+},
+{
+"id": "hongning",
+"zh": "冠天閣",
+"area": "Kwun Tong",
+"address": "11 Hong Ning Road, 1/F & 2/F",
+"addressZH": "觀塘康寧道11號冠天閣一樓及二樓",
+"region": "kowloon",
+"lat": 22.31412,
+"lon": 114.22333
+},
+{
+"id": "millennium",
+"zh": "創紀之城一期",
+"area": "Kwun Tong",
+"address": "Millennium City 1, 388 Kwun Tong Road, G/F",
+"addressZH": "觀塘道388號創紀之城一期地下1B號舖",
+"region": "kowloon",
+"lat": 22.31362,
+"lon": 114.22174
+},
+{
+"id": "kaitak",
+"zh": "啟德花園",
+"area": "Wong Tai Sin",
+"address": "Kai Tak Garden, 121 Choi Hung Road, 1/F",
+"addressZH": "九龍黃大仙彩虹道121號啟德花園商場一樓8B及9號舖",
+"region": "kowloon",
+"lat": 22.33725,
+"lon": 114.19483
+},
+{
+"id": "tsuenwan",
+"zh": "荃灣中心",
+"area": "Tsuen Wan",
+"address": "Tsuen Wan Centre, Blocks 15-17, G/F",
+"addressZH": "荃灣中心15-17座地下51-70號",
+"region": "newTerritories",
+"lat": 22.3786,
+"lon": 114.10749
+},
+{
+"id": "kwaichung",
+"zh": "葵涌廣場",
+"area": "Kwai Chung",
+"address": "Kwai Chung Plaza, 1/F",
+"addressZH": "葵涌葵涌廣場13-18號一樓",
+"region": "newTerritories",
+"lat": 22.35803,
+"lon": 114.1275
+},
+{
+"id": "cityone",
+"zh": "沙田第一城",
+"area": "Sha Tin",
+"address": "City One Shatin, 1 Ngan Shing Street, 1/F",
+"addressZH": "沙田銀城街一號沙田第一城第一城中心一樓",
+"region": "newTerritories",
+"lat": 22.38665,
+"lon": 114.20377
+},
+{
+"id": "uptown",
+"zh": "新達廣場",
+"area": "Tai Po",
+"address": "Uptown Plaza, 9 Nam Wan Road, 1/F",
+"addressZH": "大埔南運路9號新達廣場一樓53號舖",
+"region": "newTerritories",
+"lat": 22.44395,
+"lon": 114.16965
+},
+{
+"id": "trend",
+"zh": "屯門時代廣場",
+"area": "Tuen Mun",
+"address": "Trend Plaza South Wing, 2 Tuen Lung Street, 1/F",
+"addressZH": "屯門屯隆街2號屯門時代廣場南翼1樓23 – 25號鋪",
+"region": "newTerritories",
+"lat": 22.39319,
+"lon": 113.97576
+},
+{
+"id": "fairview",
+"zh": "錦繡花園",
+"area": "Yuen Long",
+"address": "Fairview Park Town Centre, Block B, G/F",
+"addressZH": "元朗錦繡花園市中心B座地下A號舖",
+"region": "newTerritories",
+"lat": 22.47222,
+"lon": 114.05257
+},
+{
+"id": "tsuilam",
+"zh": "翠林",
+"area": "Tseung Kwan O",
+"address": "Tsui Lam Shopping Centre, Shop 108",
+"addressZH": "將軍澳翠林邨商場108號舖",
+"region": "newTerritories",
+"lat": 22.32216,
+"lon": 114.24784
+},
+{
+"id": "yattung",
+"zh": "逸東",
+"area": "Tung Chung",
+"address": "Yat Tung Shopping Centre, Shop 221",
+"addressZH": "東涌逸東商場221號商舖",
+"region": "newTerritories",
+"lat": 22.28157,
+"lon": 113.93491
+}
+]

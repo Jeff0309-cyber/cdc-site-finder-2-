@@ -1,0 +1,7 @@
+// Shared settings for the app target.
+// The Google Maps key lives in Secrets.xcconfig, which git ignores.
+// Copy Secrets.example.xcconfig to Secrets.xcconfig and paste your key there.
+
+GOOGLE_MAPS_API_KEY =
+
+#include? "Secrets.xcconfig"

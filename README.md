@@ -4,6 +4,12 @@ An iPhone app for Team 26210's "Gateway to Tomorrow" case: Solution 3, **How the
 
 > **Student concept.** Not affiliated with Café de Coral Holdings Limited. The map data is real: homes, schools, universities, MTR stations, offices, shops and rival chains come from OpenStreetMap; district populations from the 2021 Census; and 173 CDC locations from the published branch list (May 2023), the team's 30 checked branches and OpenStreetMap. Two inputs are stand-ins: **homes with no CDC nearby** stand in for app orders, and **shop density** stands in for rent. Pilot results, the seeded reports and the "hidden truth" the pilots learn towards are simulated.
 
+<p>
+  <img src="screenshots/whole-hong-kong.png" width="250" alt="The whole of Hong Kong with the shortlisted spots and the best place to open next">
+  <img src="screenshots/best-spot.png" width="250" alt="Spot A near Sai Ying Pun station, with why it ranks first">
+  <img src="screenshots/districts.png" width="250" alt="All 18 districts ranked by their best spot">
+</p>
+
 ## What the data says (current build)
 
 | | Place | District | Score | New orders a day | Why |
@@ -12,7 +18,7 @@ An iPhone app for Team 26210's "Gateway to Tomorrow" case: Solution 3, **How the
 | 2 | 3 min north of Mong Kok East station | Yau Tsim Mong | 87 | ~65 | ~51,000 residents, schools, station footfall; held back by high rents |
 | 3 | Right outside Chai Wan station, Chai Wan Road | Eastern | 83 | ~65 | ~40,000 residents, station footfall, nearest CDC 1.2 km away |
 
-Re-scoring with 1,000 random weightings (each weight ±30%) puts the Sai Ying Pun spot first 78% of the time and Chai Wan station first 19% of the time. Before deciding, walk the site: Mid-Levels is steep, so a straight-line 5-minute walk overstates who can reach it, and the area has few shop units.
+Re-scoring with 1,000 random weightings (each weight ±30%) puts the Sai Ying Pun spot first 76% of the time and Chai Wan station first 19% of the time. Before deciding, walk the site: Mid-Levels is steep, so a straight-line 5-minute walk overstates who can reach it, and the area has few shop units.
 
 ## Run it
 
@@ -20,6 +26,20 @@ Re-scoring with 1,000 random weightings (each weight ±30%) puts the Sai Ying Pu
 2. Pick an iPhone simulator and press **⌘R**. Press **⌘U** to run the 31 unit tests.
 
 Without a key, the app runs on **Apple Maps** with the same data, so a demo never shows a blank map.
+
+## Web version
+
+**Try it on any phone:** https://jeff0309-cyber.github.io/cdc-site-finder-web/
+
+The web version lives in its own repository, [cdc-site-finder-web](https://github.com/Jeff0309-cyber/cdc-site-finder-web), and GitHub Pages publishes it. It shows the same results as the app: the demand map, the best place to open next, the top 10 spots and all 18 districts. Judges can open it from a QR code with nothing to install.
+
+The numbers come from this app's engine, so the two always agree. After the app's data or scoring changes, export fresh results into the web repository (assuming both folders sit side by side in `Projects`), then commit and push there:
+
+```
+xcrun swiftc -O -o /tmp/web_export tools/web_export/main.swift \
+  ios/CDCSiteFinder/Model/{HKData,Places,SiteEngine,Explain,Reports,SearchIndex,Routes}.swift
+/tmp/web_export ios/CDCSiteFinder/Resources ../cdc-site-finder-web/data/sitefinder.json
+```
 
 ## Turn on Google Maps
 

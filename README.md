@@ -27,19 +27,21 @@ Re-scoring with 1,000 random weightings (each weight ±30%) puts the Sai Ying Pu
 
 Without a key, the app runs on **Apple Maps** with the same data, so a demo never shows a blank map.
 
-## Web version
+## Web version (what the QR code opens)
 
-**Try it on any phone:** https://jeff0309-cyber.github.io/cdc-site-finder-web/
+**Try it on any phone:** https://jeff0309-cyber.github.io/cdc-site-finder-2-/
 
-The web version lives in its own repository, [cdc-site-finder-web](https://github.com/Jeff0309-cyber/cdc-site-finder-web), and GitHub Pages publishes it. It shows the same results as the app: the demand map, the best place to open next, the top 10 spots and all 18 districts. Judges can open it from a QR code with nothing to install.
+`docs/` is a phone-friendly web page with the same results as the app: the Hong Kong demand map, the best place to open next, the top 10 spots with "why here" and directions, and all 18 districts. Judges open it from the QR code with nothing to install. GitHub Pages publishes it from this repository (**Settings → Pages → Deploy from a branch → `main` and `/docs`**).
 
-The numbers come from this app's engine, so the two always agree. After the app's data or scoring changes, export fresh results into the web repository (assuming both folders sit side by side in `Projects`), then commit and push there:
+The numbers come from the app's own engine, so the two always agree. After the app's data or scoring changes, refresh the web data, then commit and push:
 
 ```
 xcrun swiftc -O -o /tmp/web_export tools/web_export/main.swift \
   ios/CDCSiteFinder/Model/{HKData,Places,SiteEngine,Explain,Reports,SearchIndex,Routes}.swift
-/tmp/web_export ios/CDCSiteFinder/Resources ../cdc-site-finder-web/data/sitefinder.json
+/tmp/web_export ios/CDCSiteFinder/Resources docs/data/sitefinder.json
 ```
+
+The map uses [Leaflet](https://leafletjs.com) 1.9.4 (kept in `docs/vendor`) and OpenStreetMap's tiles, so it needs no API key.
 
 ## Turn on Google Maps
 

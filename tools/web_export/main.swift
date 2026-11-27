@@ -1,11 +1,10 @@
 import Foundation
 
-// Exports what the web version shows (a separate repository, cdc-site-finder-web), computed by the app's
-// own engine so both always agree.
+// Exports what the web version (docs/) shows, computed by the app's own engine so both always agree.
 //
 //   xcrun swiftc -O -o /tmp/web_export tools/web_export/main.swift \
 //     ios/CDCSiteFinder/Model/{HKData,Places,SiteEngine,Explain,Reports,SearchIndex,Routes}.swift
-//   /tmp/web_export ios/CDCSiteFinder/Resources ../cdc-site-finder-web/data/sitefinder.json
+//   /tmp/web_export ios/CDCSiteFinder/Resources docs/data/sitefinder.json
 
 let arguments = CommandLine.arguments
 guard arguments.count == 3 else {

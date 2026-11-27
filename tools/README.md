@@ -22,7 +22,7 @@ The app reads `ios/CDCSiteFinder/Resources/hk_places.json` and `hk_cells.json`. 
    ```
    The check looks for the longest mall, estate or building name in each address (or its street number), near the branch's area. When the geocoder disagrees by more than 200 m, the check moves the branch to the building and keeps the old position in `geocoded`. In the 2023 list it moved 37 branches. Branches with no usable match are placed by hand in `HAND_FIXES` in `build_dataset.py`, using `queries/branch_lookups.overpassql`.
 4. **Build:** run `python3 build_dataset.py`, then copy `hk_places.json` and `hk_cells.json` into `ios/CDCSiteFinder/Resources/`.
-5. **Web version:** refresh `docs/data/sitefinder.json` with `web_export` (see "Web version" in the main README).
+5. **Web version:** copy `hk_places.json` and `hk_cells.json` into `docs/data/` as well, then run the check in `tools/web_parity/` (see "Web version" in the main README).
 
 `data/branches.json` is the 30 branches from the team's app concept, placed by hand. `data/weekend_geocoded.json` is the branch list after steps 2 and 3, so a rebuild can copy both into the working folder and skip straight to step 4.
 

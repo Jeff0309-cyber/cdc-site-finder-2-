@@ -31,17 +31,23 @@ Without a key, the app runs on **Apple Maps** with the same data, so a demo neve
 
 **Try it on any phone:** https://jeff0309-cyber.github.io/cdc-site-finder-2-/
 
-`docs/` is a phone-friendly web page with the same results as the app: the Hong Kong demand map, the best place to open next, the top 10 spots with "why here" and directions, and all 18 districts. Judges open it from the QR code with nothing to install. GitHub Pages publishes it from this repository (**Settings → Pages → Deploy from a branch → `main` and `/docs`**).
+`docs/` is the same app for the web, so judges can try it from a QR code with nothing to install. It has the same screens, wording and functions:
+- the map with demand cells, layer chips, pin collisions and grouped spot pins;
+- search;
+- the best place to open next, the shortlist, and the spot, block and place pages;
+- compare, the district ranking, approve and skip, and reports;
+- the control centre: weights, pilots, data, reviews and quality.
 
-The numbers come from the app's own engine, so the two always agree. After the app's data or scoring changes, refresh the web data, then commit and push:
+Anything a visitor changes is saved in their own browser only.
 
-```
-xcrun swiftc -O -o /tmp/web_export tools/web_export/main.swift \
-  ios/CDCSiteFinder/Model/{HKData,Places,SiteEngine,Explain,Reports,SearchIndex,Routes}.swift
-/tmp/web_export ios/CDCSiteFinder/Resources docs/data/sitefinder.json
-```
+It doesn't use exported results. It loads the same two data files as the app (`docs/data/hk_places.json` and `hk_cells.json`, copies of `ios/CDCSiteFinder/Resources/`), and `docs/js/engine.js` scores them with a line-by-line JavaScript translation of the app's Swift engine. GitHub Pages publishes it from this repository (**Settings → Pages → Deploy from a branch → `main` and `/docs`**).
 
-The map uses [Leaflet](https://leafletjs.com) 1.9.4 (kept in `docs/vendor`) and OpenStreetMap's tiles, so it needs no API key.
+After the app's data or scoring changes:
+1. Copy the two JSON files from `ios/CDCSiteFinder/Resources/` into `docs/data/`.
+2. If the Swift engine changed, make the same change in `docs/js/engine.js`.
+3. Run the check in `tools/web_parity/`. It runs both engines on the same data and fails if any score, spot, explanation, district ranking, pilot round, search result or seeded report differs.
+
+The map uses [Leaflet](https://leafletjs.com) 1.9.4 (in `docs/vendor`), OpenStreetMap's tiles and [Lucide](https://lucide.dev) icons (ISC licence), so it needs no API key.
 
 ## Turn on Google Maps
 

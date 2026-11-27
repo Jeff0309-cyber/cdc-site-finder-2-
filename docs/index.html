@@ -4,58 +4,64 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>CDC Site Finder</title>
-  <meta name="description" content="Where should Café de Coral open next? A student concept that scores every street block in Hong Kong and names the best place.">
+  <meta name="description" content="Where should Café de Coral open next? The web version of the CDC Site Finder app: every street block in Hong Kong scored, a ranked shortlist, and the team's tools to review, decide and learn.">
   <meta name="theme-color" content="#4A2511">
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/app.css">
   <script src="vendor/leaflet/leaflet.js" defer></script>
-  <script src="js/app.js" defer></script>
+  <script src="js/icons.js" defer></script>
+  <script src="js/engine.js" defer></script>
+  <script src="js/model.js" defer></script>
+  <script src="js/map.js" defer></script>
+  <script src="js/ui.js" defer></script>
 </head>
 <body>
-  <a class="skip-link" href="#panel">Skip to the results</a>
+  <a class="skip-link" href="#sheet">Skip to the results</a>
 
-  <header class="site-header">
-    <a class="brand" href="#">
-      <svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true">
-        <path d="M16 2C9.9 2 5 6.8 5 12.8 5 21 16 30 16 30s11-9 11-17.2C27 6.8 22.1 2 16 2z" fill="#F7B500" stroke="#4A2511" stroke-width="2.2"/>
-        <circle cx="16" cy="12.6" r="4.2" fill="#4A2511"/>
-      </svg>
-      <span class="brand-text">
-        <span class="brand-name">CDC Site Finder</span>
-        <span class="brand-tag">Where should Café de Coral open next?</span>
-      </span>
-    </a>
-  </header>
+  <div id="map" class="map" aria-label="Map of Hong Kong with the demand score of every street block"></div>
 
-  <main class="layout">
-    <section class="map-wrap" aria-label="Map of Hong Kong with the demand score of every street block">
-      <div id="map"></div>
-      <div class="map-chips" role="group" aria-label="Map layers">
-        <button class="chip" type="button" data-layer="demand" aria-pressed="true">Demand</button>
-        <button class="chip" type="button" data-layer="stores" aria-pressed="true">CDC stores</button>
+  <div class="overlay" id="overlay">
+    <div class="search" id="search-area">
+      <div class="search-bar">
+        <span class="search-icon" id="search-icon"></span>
+        <input id="search" type="search" placeholder="Search spots, stores, schools, MTR" autocomplete="off"
+               autocapitalize="off" autocorrect="off" spellcheck="false" enterkeyhint="search"
+               aria-label="Search spots, stores, schools, MTR" aria-controls="search-panel" aria-expanded="false">
+        <button id="search-clear" class="search-clear" type="button" aria-label="Clear search" hidden></button>
       </div>
-      <button class="map-reset" type="button" data-action="reset">All of Hong Kong</button>
-      <div class="legend" aria-hidden="true">
-        <span class="legend-title">Demand score</span>
-        <span class="legend-scale"><i></i><i></i><i></i><i></i><i></i></span>
-        <span class="legend-ends"><span>Low</span><span>High</span></span>
+      <div id="search-panel" class="search-panel" hidden></div>
+    </div>
+    <div id="chips" class="chips" role="group" aria-label="Map layers"></div>
+    <div class="overlay-row">
+      <div class="overlay-left">
+        <div id="legend" class="legend material" aria-label="Demand score legend, from low (light yellow) to high (dark orange)">
+          <span class="legend-title">Demand score</span>
+          <span class="legend-scale"><i></i><i></i><i></i><i></i><i></i></span>
+          <span class="legend-ends"><span>Low</span><span>High</span></span>
+        </div>
+        <div id="hidden-pins" class="hidden-pins material" hidden></div>
       </div>
-    </section>
+      <div id="map-buttons" class="map-buttons material"></div>
+    </div>
+  </div>
 
-    <section id="panel" class="panel" tabindex="-1" aria-label="Results">
-      <div id="view">
-        <p class="loading">Loading the map data…</p>
-      </div>
-      <noscript><p class="loading">This page needs JavaScript to show the map and results.</p></noscript>
-      <footer class="panel-footer">
-        <p>Student concept by Team 26210 for the Gateway to Tomorrow case competition. Not affiliated with Café de Coral Holdings Limited.</p>
-        <p>Also built as an iPhone app: see its <a href="https://github.com/Jeff0309-cyber/cdc-site-finder-2-">Xcode project on GitHub</a>.</p>
-        <p>Map and data © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors (ODbL).</p>
-      </footer>
-    </section>
-  </main>
+  <div id="toast" class="toast material" role="status" aria-live="polite" hidden></div>
 
-  <p id="status" class="sr-only" aria-live="polite"></p>
+  <section id="sheet" class="sheet" data-detent="peek" aria-label="Results" tabindex="-1">
+    <div id="sheet-handle" class="sheet-handle" role="button" tabindex="0" aria-label="Drag or press to resize the results panel"><span></span></div>
+    <header id="sheet-nav" class="sheet-nav" hidden>
+      <button id="sheet-back" class="nav-back material" type="button" aria-label="Back"></button>
+      <h1 id="sheet-title" class="nav-title"></h1>
+    </header>
+    <div id="sheet-body" class="sheet-body">
+      <p class="loading">Loading the map data…</p>
+      <noscript><p class="loading">This page needs JavaScript to show the map.</p></noscript>
+    </div>
+  </section>
+
+  <dialog id="controls" class="dialog controls-dialog" aria-labelledby="controls-title"></dialog>
+  <dialog id="report" class="dialog report-dialog" aria-labelledby="report-title"></dialog>
+  <dialog id="confirm" class="dialog confirm-dialog" aria-labelledby="confirm-title"></dialog>
 </body>
 </html>
